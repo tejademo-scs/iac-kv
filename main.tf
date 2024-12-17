@@ -10,6 +10,7 @@ resource "azurerm_key_vault" "teja-test-kv-21201" {
   tenant_id                = "d207c7bd-fcb1-4dd3-855a-cfd2f9b651e8" # Replace with your Azure tenant ID
   sku_name                 = "standard"
   purge_protection_enabled = true
+  soft_delete_retention_days  = 7
 
   network_acls {
     default_action = var.action
